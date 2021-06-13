@@ -1,6 +1,12 @@
 package com.share.service;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
+
 public interface CompanyService {
-void autoUpdateStocks();
-void updateSharePrice();
+void companyShares(int companyid);
+void autoUpdateStocks(int sid,double qty) throws ClassNotFoundException, SQLException;
+ArrayList<Double> toGetPriceQuantity(int stockid);
+void generateStocks();
+
 }
